@@ -1,0 +1,63 @@
+*{
+	font-family: 微軟正黑體;
+	position: relative;
+	box-sizing: border-box;
+}
+body{
+	padding:0;
+	margin:0;
+	background: url(./images/background.jpg);
+	background-attachment: fixed;
+}
+.cover{
+	position: absolute;
+	left:0;
+	top:0;
+	background-color: rgba(0,0,0,0.6);
+	width:100%;
+	height: 100%;
+}
+.container{
+	padding:50px;
+	margin:0 auto;
+	width:80%;
+	min-width: 1200px;
+}
+.container .gamebox{
+	width:300px;
+	margin:20px;
+	border:1px solid black;
+	display: inline-block;
+	transition: 0.3s;
+}
+.container .gamebox .gamevedio{
+	font-size: 0px;
+}
+.container .gamebox .gamevedio img{
+	width:100%;
+}
+.container .gamebox .gameinfo{
+	background-color: rgba(0, 4, 12, 1);
+}
+.container .gamebox .gameinfo>div{
+	display: inline-block;
+	color:white;
+}
+.container .gamebox .gameinfo .userphoto{
+	width:50px;
+	height:50px;
+	margin-left:10px;
+}
+.container .gamebox .gameinfo .userphoto>img{
+	width:100%;
+	border-radius: 50%;
+	border:2px solid white;
+}
+.container .gamebox .gameinfo .userinfo{
+	margin-left:20px;
+	font-weight: bold;
+}
+.container .gamebox:hover{
+	box-shadow: 0 0 20px black;
+	filter:brightness(150%);
+}
