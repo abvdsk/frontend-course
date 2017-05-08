@@ -5,10 +5,7 @@ $.ajax({
 			   'Client-ID': '4vqkichh7ttxn1oljffso23nacmsnh'
 			},
 			success:function(data){
-				$('.wrap').append(data.streams);
-				var gamebox_html = '';
-				
-
+				var gamebox_html = '';//template html
 				for(var i=0; i<data.streams.length; i++){
 					gamebox_html += '<div class="gamebox"><div class="gamephoto" style="background: url('+data.streams[i].preview.large+') no-repeat;background-size:cover"></div><div class="gameinfo"><div class="player_photo" style="background-image: url('+data.streams[i].channel.logo+')"></div><div class="player_info"><p class="gamename">'+data.streams[i].channel.game+'</p><p>'+data.streams[i].channel.name+'</p></div></div></div>';
 				}
