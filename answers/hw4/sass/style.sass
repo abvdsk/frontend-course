@@ -1,0 +1,67 @@
+@import reset
+@import compass
+
+$wrap_width: 960px
+$gamebox_width: 300px
+$text_color: white
+$gameinfo_backgound: black
+
+@mixin circle($size)
+  width: $size
+  height: $size
+  +border-radius(50%)
+body
+  background: url('../images/background.jpg') no-repeat
+  background-attachment: fixed
+  height: 100%
+.cover
+  background: rgba(0,0,0,0.5)
+  height: 100%
+.wrap
+  z-index: 1
+  width: $wrap_width
+  margin: 0 auto
+  padding: 10px
+  .gamebox
+    display: inline-block
+    width: $gamebox_width
+    color: $text_color
+    transition: 0.3s
+    &:hover
+      filter: brightness(1.5)
+      +box-shadow(0 0 10px black)
+    &:nth-child(3n+1)
+      margin-right: 10px
+      margin-left: 10px
+    &:nth-child(3n+2)
+      margin-right: 10px
+    &:nth-child(n+4)
+      margin-top: 10px
+    .gamephoto
+      width: 100%
+      height: 180px
+    .gameinfo
+      padding: 10px
+      background-color: $gameinfo_backgound 
+      &>div
+        display: inline-block
+        vertical-align: middle
+      .player_photo
+        +circle(50px)
+        background: url('../images/user_play.png') no-repeat
+        background-size: cover
+      .player_info
+        width: calc(100% - 100px)
+        &>p
+          margin-left: 20px
+          font-weight: bold
+        .gamename
+          margin-bottom: 10px
+          width: 100%
+          overflow: hidden
+          text-overflow: ellipsis
+
+
+     
+
+
